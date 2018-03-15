@@ -1,6 +1,6 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
+    "name": "Elibrary",
+    "description": "Elibrary Laravel Framework.",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
@@ -41,6 +41,9 @@
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
             "php artisan optimize"
+        ],
+        "test" : [
+            "phpunit tests"
         ]
     },
     "config": {

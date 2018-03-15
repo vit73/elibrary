@@ -77,7 +77,7 @@ class PublishingHouseController extends Controller
      * @param PublishingHouse $publishing_house
      * @return mixed
      */
-    public function getPublishingHouseFromBook(PublishingHouse $publishing_house)
+    public function getBooksFromPublishingHouse(PublishingHouse $publishing_house)
     {
         return $publishing_house->books;
     }

@@ -36,11 +36,12 @@ class AuthorController extends Controller
      */
     public function store(Request $request)
     {
-		$this->validate($request, [
-			'name' => 'required|max:255',
-			'surname' => 'required|max:255',
-			'middlename' => 'required|max:255'
-		]);
+        $this->validate($request, [
+            'name' => 'required|max:255',
+            'surname' => 'required|max:255',
+            'middlename' => 'required|max:255'
+        ]);
+
         $author = Author::create($request->all());
 
         return response()->json($author, 201); // Объект создан

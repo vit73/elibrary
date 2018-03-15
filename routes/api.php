@@ -22,15 +22,19 @@ Route::get('authors/{author}', 'AuthorController@show');
 Route::post('authors', 'AuthorController@store');
 Route::put('authors/{author}', 'AuthorController@update');
 Route::delete('authors/{author}', 'AuthorController@delete');
+Route::get('authors/{author}/books', 'AuthorController@getAuthorBooks');
 
 Route::get('books', 'BookController@index');
 Route::get('books/{book}', 'BookController@show');
 Route::post('books', 'BookController@store');
 Route::put('books/{book}', 'BookController@update');
 Route::delete('books/{book}', 'BookController@delete');
+Route::get('books/{book}/author', 'BookController@getAuthorFromBook');
+Route::get('books/{book}/publishing_houses', 'BookController@getPublishingHouseFromBook');
 
 Route::get('publishing_houses', 'PublishingHouseController@index');
 Route::get('publishing_houses/{publishing_house}', 'PublishingHouseController@show');
 Route::post('publishing_houses', 'PublishingHouseController@store');
 Route::put('publishing_houses/{publishing_house}', 'PublishingHouseController@update');
 Route::delete('publishing_houses/{publishing_house}', 'PublishingHouseController@delete');
+Route::get('publishing_houses/{publishing_house}/books', 'PublishingHouseController@getBooksFromPublishingHouse');
